@@ -1,9 +1,11 @@
-from ex107ao111 import moeda
+from ex107ao111 import moeda2
 from ex107ao111 import dado
 
 
-p = dado.leiaDinheiro()
-print(f'A metade de {p} eh {moeda.metade(p)}')
-print(f'O dobro de {p} eh {moeda.dobro(p)}')
-print(f'Aumentando {p} em 10% temos {moeda.aumentar(p, 10)}')
-print(f'Diminuindo {p} em 13% temos {moeda.diminuir(p, 13)}')
+p = dado.leiaDinheiro('Digite o preco: R$ ')
+print(f'A metade de {moeda2.moeda(p)} eh {moeda2.metade(p, True)}')
+print(f'O dobro de {moeda2.moeda(p)} eh {moeda2.dobro(p, True)}')
+print(f'Aumentando {moeda2.moeda(p)} em 10% temos {moeda2.aumentar(p, 10, True)}')
+print(f'Diminuindo {moeda2.moeda(p)} em 13% temos {moeda2.diminuir(p, 13, True)}')
+
+moeda2.resumo2(p, 80, 35)

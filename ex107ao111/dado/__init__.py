@@ -1,11 +1,10 @@
-def leiaDinheiro():
-    while True:
-        din = float(input('Digite um valor: '))
-        if din != float or din != int:
-            print('VALOR INVALIDO. TENTE NOVAMENTE')
+def leiaDinheiro(msg):
+    valido = False
+    while not valido:
+        entrada = str(input(msg)).replace(',','.').strip()
+        if entrada.isalpha() or entrada == '': #se ela for alphanumerico
+            valido = False
+            print('VALOR INPUTADO INVALIDO. TENTE NOVAMENTE')
         else:
-            return din
-            break
-
-            
-leiaDinheiro()
+            valido = True
+            return float(entrada)

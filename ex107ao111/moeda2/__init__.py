@@ -2,32 +2,36 @@ def moeda(din, tipomoeda='R$'):
     return f'{tipomoeda} {float(din):.2f}'.replace('.',',')
 
 
-def aumentar(din=0, por=0, f=True):
+def aumentar(din=0, por=0, f=False):
+    res = din*(1+(por/100))
     if f == True:
-        return f'{din*(1+(por/100))}'
+        return moeda(res)
     else:
-        return f'{din*(1+(por/100))}'
+        return res
     
     
-def diminuir(din=0, por=0, f = True):
+def diminuir(din=0, por=0, f=False):
+    res = din*(1-(por/100))
     if f == True:
-        return f'{din*(1-(por/100))}'
+        return moeda(res)
     else:
-        return f'{din*(1-(por/100))}'
+        return res
     
     
 def dobro(din=0, f=True):
+    res = din/2
     if f == True:
-        return f'{din*2}'
+        return moeda(res)
     else:
-        return f'{din*2}'
+        return res
     
     
 def metade(din=0, f=True):
+    res = din/2
     if f == True:
-        return f'{din/2}'
+        return moeda(res)
     else:
-        return f'{din/2}'
+        return res
 
 
 def resumo(din=0, aum=0, dim=0):
@@ -44,5 +48,17 @@ def resumo(din=0, aum=0, dim=0):
     print(f'{aumentar(din,aum,True):>10}')
     print(f'{dim}% {"de reducao preco":<26}', end='')
     print(f'{diminuir(din,dim,True):>10}')
+    print('='*40)
+    
+
+def resumo2(din=0, aum=0, dim=0):
+    print('='*40)
+    print(f'{"RESUMO DO VALOR".center(40)}')
+    print('-'*40)
+    print(f'Preco analisado: \t{moeda(din)}')
+    print(f'Dobro do preco: \t{dobro(din,True)}')
+    print(f'Metade do preco: \t{metade(din,True)}')
+    print(f'{aum}% de aumento preco: \t{aumentar(din,aum,True)}')
+    print(f'{dim}% de reducao preco: \t{diminuir(din,dim,True)}')
     print('='*40)
     

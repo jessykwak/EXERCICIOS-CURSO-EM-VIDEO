@@ -3,10 +3,14 @@
 
 import pygame
 
+pygame.init()
+pygame.mixer.init()
+
 musica = input('Digite o caminho do arquivo de musica: ')
-pygame.mixer.init()  
+  
 pygame.mixer.music.load(musica)
 pygame.mixer.music.play()
 
+# pygame.event.wait() ->nao sei pq mas nao esta funcionando soh com event.wait
 while pygame.mixer.music.get_busy() == True:
     continue

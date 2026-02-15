@@ -30,3 +30,5 @@ soma = num1 + num2
 
 print('A soma de', num1, 'e', num2, 'eh igual a', num1 + num2)
 print(num1, '+', num2, '=', soma)
+
+# exercicios 01 e 02

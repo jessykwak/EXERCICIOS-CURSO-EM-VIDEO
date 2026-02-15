@@ -19,6 +19,8 @@
 # print('{:.2f}'.format(ceil(r)))
 # print('{:.2f}'.format(floor(r)))
 
+#exercicios 16 ao 21
+
 import random
 import emoji
 n = random.random()

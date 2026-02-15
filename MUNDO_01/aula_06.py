@@ -38,3 +38,5 @@ print(a.isalnum())
 print(a.isascii())
 print(a.isdecimal(), a.isdigit(), a.isidentifier(), a.islower(), a.isprintable(), a.isspace(), a.istitle())
 print(a.isupper(), a.__init_subclass__()A)
+
+# exercicios 03 e 04

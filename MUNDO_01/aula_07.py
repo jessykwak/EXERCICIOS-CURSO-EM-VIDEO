@@ -27,3 +27,5 @@ print(5 % 2)
 # {:=^20} #centraliza entre 20 =s
 # \n #para pular linha
 # , end = '' #para nao pular linha no final do print
+
+# exercicios 05 ao 15
